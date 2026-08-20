@@ -73,3 +73,12 @@ p {
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
+code.moon-code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f5f9; /* Bright lunar text color */
+  
+  /* Gives the actual code characters a slight glowing atmosphere */
+  text-shadow: 0 0 8px rgba(241, 245, 249, 0.3);
+}
