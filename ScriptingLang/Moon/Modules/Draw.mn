@@ -1,0 +1,10 @@
+package draw
+package 3dSite
+
+Def Draw -1 ;
+   1@-
+
+Def Draw 1 ;
+   1@
+Def Cubicle ;
+    draw("Cubicle")
