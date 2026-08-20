@@ -1,0 +1,75 @@
+/* Core setup with dark space colors */
+:root {
+  --space-bg: #0b0d17;
+  --moon-surface: #e2e8f0;
+  --moon-shadow: #94a3b8;
+  --moon-glow: rgba(226, 232, 240, 0.4);
+  --earth-glow: rgba(56, 189, 248, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--space-bg);
+  color: #ffffff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Container for layout */
+.universe {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* The Glowing Moon */
+.moon {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 30% 30%, var(--moon-surface) 0%, var(--moon-shadow) 100%);
+  border-radius: 50%;
+  margin: 0 auto 30px auto;
+  position: relative;
+  box-shadow: 
+    0 0 50px 10px var(--moon-glow),
+    inset -20px -20px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* Procedural Moon Craters */
+.moon::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  top: 40px;
+  left: 50px;
+  box-shadow: 
+    inset 3px 3px 5px rgba(0,0,0,0.2),
+    60px 40px 0 -5px rgba(0, 0, 0, 0.08),
+    20px 80px 0 5px rgba(0, 0, 0, 0.06),
+    80px 10px 0 -2px rgba(0, 0, 0, 0.07);
+}
+
+/* Text Styling */
+h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px var(--moon-glow);
+}
+
+p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
